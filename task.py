@@ -32,3 +32,27 @@
 #Delete these comments before commit!
 #
 #Good luck.
+
+
+
+class Matrix:
+  def __init__(self, a11, a12, a21, a22):
+    self.elements = [a11, a12, a21, a22]
+
+  
+  def __add__(self, matrix1, matrix2):
+    for i in range(3):
+      self.elements[i]=matrix1.elements[i]+matrix2.elements[i]
+
+  @classmethod
+  def init3(self, matrix1, matrix2):
+    summ = 0
+    for i in range(3):
+      summ += matrix1.elements[i] * matrix2.elements[i]
+    self.summ=summ
+
+
+if __name__ == "__main__":
+  matrix1=Matrix(1, 2, 3, 4)
+  matrix2=Matrix(4, 5, 6, 7)
+
